@@ -14,7 +14,7 @@ const Login: React.FC = () => {
 
   const getStatus = () => {
      if (formSubmitStatus) {
-       return isLoading ? 'Loading, please wait...' : (isSignedIn ? 'Successfully registered' : `Error: ${error}`)
+       return isLoading ? 'Loading, please wait...' : (isSignedIn ? 'Successfully logged in' : `Error: ${error}`)
      }
      return '';
   }

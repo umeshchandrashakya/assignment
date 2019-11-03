@@ -137,7 +137,7 @@ export const register = async (name: string, email: string, phone: string, passw
 const BaseModule: React.FC = () => {
     // load epic and reducer
     loginHandle();
-    //regHandle();
+    regHandle();
 
     return <App />;
 }
