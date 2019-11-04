@@ -23,8 +23,8 @@ const Login: React.FC = () => {
     <div>
       <h1>Login</h1>
       <form>
-        <input value={username} placeholder='Username' onChange={e => usernameChange(e.target.value)} />
-        <input value={password} placeholder='Password' onChange={e => passwordChange(e.target.value)} />
+        <input className='input1' value={username} placeholder='Username' onChange={e => usernameChange(e.target.value)} />
+        <input className='input2' value={password} placeholder='Password' onChange={e => passwordChange(e.target.value)} />
         <button type='button' onClick={onLoginClicked}>Login</button>
       </form>
       <h3>{getStatus()}</h3>
