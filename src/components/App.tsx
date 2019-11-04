@@ -1,12 +1,10 @@
-import * as React from "react";
-import "./App.css";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import  Login  from "./pages/Login";
 import Registration from "./pages/Registration";
 import Home from "./pages/Home";
 
-class App extends React.Component {
-  render() {
+const App:React.FC = () => {
     return (
       <Router>
         <div>
@@ -18,7 +16,6 @@ class App extends React.Component {
         </div>
       </Router>
     );
-  }
 }
 
 export default App;
