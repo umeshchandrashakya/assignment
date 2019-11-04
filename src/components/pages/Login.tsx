@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { useActions } from "typeless";
 import { RegActions, getRegState } from "../typeless/interface/reg";
 
