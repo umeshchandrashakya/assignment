@@ -52,4 +52,8 @@ describe("<App />", () => {
     );
     expect(wrapper.find(Registration)).toHaveLength(0);
   });
+  it("has a div tag", () => {
+    const warpper = shallow(<App />);
+    expect(warpper.find("div")).toHaveLength(1);
+  });
 });
