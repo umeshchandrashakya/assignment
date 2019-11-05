@@ -16,6 +16,7 @@ const StyledLogin = styled.div`
   background: #eee;
   
 
+<<<<<<< HEAD
   h2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -51,10 +52,40 @@ const StyledLogin = styled.div`
 //   width: 150px;
 //   box-sizing: border-box;
 // `;
+=======
+const Login: React.FC = () => {
+  // wrap actions with `dispatch`
+  const { usernameChange, passwordChange, signIn } = useActions(LoginActions);
+  // get state from store
+  const {
+    username,
+    password,
+    isLoading,
+    error,
+    isSignedIn,
+    formSubmitStatus
+  } = getLoginState.useState();
+
+  const onLoginClicked = () => {
+    signIn(username, password);
+  };
+
+  const getStatus = () => {
+    if (formSubmitStatus) {
+      return isLoading
+        ? "Loading, please wait..."
+        : isSignedIn
+        ? "Successfully logged in"
+        : `Error: ${error}`;
+    }
+    return "";
+  };
+>>>>>>> 00aef8645b29212b1cc07789b8f07cf2c8d97d51
 
 
 const Login = () => {
   return (
+<<<<<<< HEAD
     <LoginForm title='Login Form' />
   )
 }
@@ -63,6 +94,31 @@ const Login = () => {
 
 // <StyledLogin>
 //   <h2>Login</h2>
+=======
+    <div>
+      <h1>Login</h1>
+      <form>
+        <input
+          className="input1"
+          value={username}
+          placeholder="Username"
+          onChange={e => usernameChange(e.target.value)}
+        />
+        <input
+          className="input2"
+          value={password}
+          placeholder="Password"
+          onChange={e => passwordChange(e.target.value)}
+        />
+        <button type="button" onClick={onLoginClicked}>
+          Login
+        </button>
+      </form>
+      <h3>{getStatus()}</h3>
+    </div>
+  );
+};
+>>>>>>> 00aef8645b29212b1cc07789b8f07cf2c8d97d51
 
 {/*        <StyledLabel  >Username</StyledLabel>
        <StyledInput type="text" placeholder="email" />
