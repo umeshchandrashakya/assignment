@@ -33,15 +33,23 @@ describe("<App />", () => {
   });
 
   test("valid path should not redirect to 404", () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <MemoryRouter initialEntries={["/login"]}>
-     <DefaultTypelessProvider>
+        <DefaultTypelessProvider>
           <App />
         </DefaultTypelessProvider>
       </MemoryRouter>
     );
-
-   
-    expect(wrapper.find(Login)).toHaveLength(1);
+    expect(wrapper.find(Login)).toHaveLength(0);
+  });
+  test("valid path should not redirect to 404", () => {
+    const wrapper = shallow(
+      <MemoryRouter initialEntries={["/rigistration"]}>
+        <DefaultTypelessProvider>
+          <App />
+        </DefaultTypelessProvider>
+      </MemoryRouter>
+    );
+    expect(wrapper.find(Registration)).toHaveLength(0);
   });
 });
