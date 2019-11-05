@@ -15,10 +15,11 @@ interface Props {
 }
 
 const InputText = (props: Props) => {
-  return (<div>
-    <StyledInput type="text" placeholder={props.placeholder} /><br></br>
-  </div>
-
-  )
-}
+  return (
+    <div>
+      <StyledInput type="text" placeholder={props.placeholder} />
+      <br></br>
+    </div>
+  );
+};
 export default InputText;
