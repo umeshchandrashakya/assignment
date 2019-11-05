@@ -1,9 +1,35 @@
-import * as React from "react";
+import React from "react";
+import { useActions } from "typeless";
+import { LoginActions, getLoginState } from "../typeless/interface/login";
 
-export const Login = () => {
+const Login: React.FC = () => {
+  // wrap actions with `dispatch`
+  const { usernameChange, passwordChange, signIn } = useActions(LoginActions);
+  // get state from store
+  const { username, password, isLoading, error, isSignedIn, formSubmitStatus } = getLoginState.useState();
+
+  const onLoginClicked = () => {
+    signIn(username, password);
+  }
+
+  const getStatus = () => {
+     if (formSubmitStatus) {
+       return isLoading ? 'Loading, please wait...' : (isSignedIn ? 'Successfully logged in' : `Error: ${error}`)
+     }
+     return '';
+  }
+
   return (
     <div>
-      <h1>Hello Login</h1>
+      <h1>Login</h1>
+      <form>
+        <input value={username} placeholder='Username' onChange={e => usernameChange(e.target.value)} />
+        <input value={password} placeholder='Password' onChange={e => passwordChange(e.target.value)} />
+        <button type='button' onClick={onLoginClicked}>Login</button>
+      </form>
+      <h3>{getStatus()}</h3>
     </div>
   );
 };
+
+export default Login;

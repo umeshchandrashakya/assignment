@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import BaseModule from './components/typeless/module/index'
+import { DefaultTypelessProvider } from 'typeless';
 
-import App from "./components/App";
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+<DefaultTypelessProvider>
+    <BaseModule />
+  </DefaultTypelessProvider>, document.getElementById("root"));
