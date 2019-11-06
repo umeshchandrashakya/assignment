@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledInput = styled.input`
+export const StyledInput = styled.input`
   border: 1px solid #000;
   border-radius: 10px;
   padding: 10px;
@@ -14,10 +14,18 @@ interface Props {
   placeholder: string;
 }
 
+const handleInputChange = event => {
+  console.log(event);
+};
+
 const InputText = (props: Props) => {
   return (
     <div>
-      <StyledInput type="text" placeholder={props.placeholder} />
+      <StyledInput
+        type="text"
+        placeholder={props.placeholder}
+        onChange={handleInputChange}
+      />
       <br></br>
     </div>
   );

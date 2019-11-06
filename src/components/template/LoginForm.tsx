@@ -5,13 +5,9 @@ import Label from "../atoms/Label";
 import Field from "../molecules/Field";
 import Form from "../organisms/Form";
 
-  
 interface Props {
-    title: string;
+  title: string;
 }
 
-const LoginForm = (props: Props) => (
-    <Form title={props.title} />
-
-);
+const LoginForm = (props: Props) => <Form title={props.title} />;
 export default LoginForm;

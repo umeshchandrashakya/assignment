@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 const StyledLabel = styled.label`
   font-weight: bold;
   caret-color: getColor("blue");
