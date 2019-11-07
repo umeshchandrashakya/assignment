@@ -34,10 +34,7 @@ interface Props {
 const LoginForm = (props: Props) => (
     <StyledLogin>
     <Form title={props.title} />
-<<<<<<< HEAD
     </StyledLogin>
-=======
->>>>>>> origin/brijesh_dev
 );
 
 export default LoginForm;

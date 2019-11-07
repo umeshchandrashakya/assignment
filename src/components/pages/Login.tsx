@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 import styled from "styled-components";
 import Label from "../atoms/Label";
 import InputText from "../atoms/InputText";
@@ -45,9 +44,6 @@ import StyledLogin from "../template/LoginForm";
 //   width: 150px;
 //   box-sizing: border-box;
 // `;
-=======
-import LoginForm from "../template/LoginForm";
->>>>>>> origin/brijesh_dev
 
 const Login = () => {
   return (
