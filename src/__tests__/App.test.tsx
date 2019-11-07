@@ -1,9 +1,7 @@
 import * as React from "react";
-import { Component } from "react";
 import App from "../components/App";
 import Adapter from "enzyme-adapter-react-16";
-import { configure, shallow, mount, render } from "enzyme";
-
+import { configure, shallow, mount} from "enzyme";
 import { MemoryRouter } from "react-router";
 import Home from "../components/pages/Home";
 import Login from "../components/pages/Login";
