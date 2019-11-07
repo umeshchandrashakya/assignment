@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 const StyledLabel = styled.label`
 font-weight: bold; 
 caret-color: getColor('blue'); 
@@ -16,8 +17,9 @@ interface Props {
     value: string;
 }
 
-
 const Label = (props: Props) => (
-    <StyledLabel >{props.value}</StyledLabel>
+    <StyledLabel >{props.value}
+    <br></br></StyledLabel>
 );
+
 export default Label;

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 const Styledbutton = styled.button`
   background: green;
     color: #fff;
@@ -19,4 +20,3 @@ interface Props{
     <Styledbutton>{props.buttonText}</Styledbutton>
 );
 export default Button;
-  

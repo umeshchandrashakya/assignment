@@ -3,25 +3,18 @@ import styled from "styled-components";
 import Label from "../atoms/Label";
 import InputText from "../atoms/InputText";
 import Button from "../atoms/Button";
-import LoginForm from "../template/LoginForm";
-const StyledLogin = styled.div`
-  display: flex;
-  align-items: center;
-  flex-flow: column;
-  width: 350px;
-  height: 350px;
-  margin: 0 auto;
-  border: 2px solid #000;
-  border-radius: 20px;
-  background: #eee;
-  
+import StyledLogin from "../template/LoginForm";
 
-
-  h2 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-  `;
+// const StyledLogin = styled.div`
+//   display: flex;
+//   align-items: center;
+//   flex-flow: column;
+//   width: 350px;
+//   height: 350px;
+//   margin: 0 auto;
+//   border: 2px solid #000;
+//   border-radius: 20px;
+//   background: #eee;
 
 //   button {
 //     background: green;
@@ -56,7 +49,7 @@ const StyledLogin = styled.div`
 
 const Login = () => {
   return (
-    <LoginForm title='Login Form' />
+    <StyledLogin title={"Login Form"}></StyledLogin>
   )
 }
 

@@ -8,6 +8,7 @@ const StyledInput = styled.input`
   margin: 5px;
   width: 400px;
   box-sizing: border-box;
+ 
 `;
 
 interface Props {
@@ -16,9 +17,8 @@ interface Props {
 
 const InputText = (props: Props) => {
   return (<div>
-    <StyledInput type="text" placeholder={props.placeholder} /><br></br>
+    <StyledInput type="text" placeholder={props.placeholder} />
   </div>
-
-  )
+         )
 }
 export default InputText;
