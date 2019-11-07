@@ -12,6 +12,5 @@ interface Props {
 
 const LoginForm = (props: Props) => (
     <Form title={props.title} />
-
 );
 export default LoginForm;
