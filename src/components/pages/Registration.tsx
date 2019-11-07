@@ -1,74 +1,48 @@
 import React from "react";
+import Field from "../molecules/Field";
+import Label from "../atoms/Label";
+import styled from "styled-components";
+import Button from "../atoms/Button";
+import image from "../../assests/image.jpg";
+import image1 from "../../assests/image1.jpg";
 import { useActions } from "typeless";
 import { RegActions, getRegState } from "../typeless/interface/reg";
+import { url } from "inspector";
+import RegForm from "../template/RegForm";
+
+const StyledRegistration = styled.div`
+  display: flex;
+  
+  flex-flow: column;
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px ;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-image: url(${image});
+  height: 100vh;
+  width: 100vw;
+
+  background-size: cover;
+  background-position: center center;
+  box-sizing: border-box;
+  
+ 
+`;
+
+
 
 const Registration: React.FC = () => {
-  // wrap actions with `dispatch`
-  const {
-    nameChange,
-    emailChange,
-    passwordChange,
-    phoneChange,
-    register
-  } = useActions(RegActions);
-  // get state from store
-  const {
-    name,
-    email,
-    password,
-    phone,
-    isSuccess,
-    isLoading,
-    error,
-    formSubmitStatus
-  } = getRegState.useState();
 
-  const onLoginClicked = () => {
-    register(name, email, phone, password);
-  };
+ return (
+   
+  <StyledRegistration>
 
-  const getStatus = () => {
-    if (formSubmitStatus) {
-      return isLoading
-        ? "Loading, please wait..."
-        : isSuccess
-        ? "Successfully registered"
-        : `Error: ${error}`;
-    }
-    return "";
-  };
-
-  return (
-    <div>
-      <h1>Register</h1>
-      <form>
-        <input
-          value={name}
-          placeholder="Name"
-          onChange={e => nameChange(e.target.value)}
-        />
-        <input
-          value={email}
-          placeholder="Email"
-          onChange={e => emailChange(e.target.value)}
-        />
-        <input
-          value={phone}
-          placeholder="Phone"
-          onChange={e => phoneChange(e.target.value)}
-        />
-        <input
-          value={password}
-          placeholder="Password"
-          onChange={e => passwordChange(e.target.value)}
-        />
-        <button type="button" onClick={onLoginClicked}>
-          Register
-        </button>
-      </form>
-      <h3>{getStatus()}</h3>
-    </div>
+    <RegForm title="REGISTRATION"></RegForm>
+    </StyledRegistration>
+    
   );
 };
 
-export default Registration;
+ export default Registration;
