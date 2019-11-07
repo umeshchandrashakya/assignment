@@ -11,8 +11,8 @@ interface Props {
 const Field = (props: Props) => (
     <div>
         <Label value={props.labelValue} />
-        <InputText placeholder={props.inputPlaceholder} />
+        <InputText placeholder={props.inputPlaceholder} /> 
     </div>
-
-);
+   );
+   
 export default Field;

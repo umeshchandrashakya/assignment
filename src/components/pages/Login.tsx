@@ -56,7 +56,7 @@ import StyledLogin from "../template/LoginForm";
 
 const Login = () => {
   return (
-    <StyledLogin title={""}></StyledLogin>
+    <StyledLogin title={"Login Form"}></StyledLogin>
   )
 }
 
