@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 import Home from "./pages/Home";
 import img from "../img/sample.jpg";
+import styled from "styled-components";
 const StyledLogin = styled.div`
   background-repeat: no-repeat;
   background-image: url(${img});
