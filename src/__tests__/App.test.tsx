@@ -8,11 +8,7 @@ import { MemoryRouter } from "react-router";
 import Home from "../components/pages/Home";
 import Login from "../components/pages/Login";
 import Registration from "../components/pages/Registration";
-import { useActions, DefaultTypelessProvider } from "typeless";
-import {
-  LoginActions,
-  getLoginState
-} from "../components/typeless/interface/login";
+import { DefaultTypelessProvider } from "typeless";
 
 configure({ adapter: new Adapter() });
 

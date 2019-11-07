@@ -14,7 +14,7 @@ margin-top : 20px;
 `;
 
 interface Props {
-    value: string;
+  value: string;
 }
 
 const Label = (props: Props) => (

@@ -3,9 +3,10 @@ import styled from "styled-components";
 import InputText from "../atoms/InputText";
 import Label from "../atoms/Label";
 
+
 interface Props {
-    labelValue: string;
-    inputPlaceholder: string;
+  labelValue: string;
+  inputPlaceholder: string;
 }
 
 const Field = (props: Props) => (

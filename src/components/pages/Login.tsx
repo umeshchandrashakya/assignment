@@ -28,14 +28,13 @@ import StyledLogin from "../template/LoginForm";
 //   }
 // `;
 // const StyledLabel = styled.label`
-// font-weight: bold; 
-// caret-color: getColor('blue'); 
+// font-weight: bold;
+// caret-color: getColor('blue');
 // display: block;
 // text-align: left;
 // margin-right: 23%;
 
 // `;
-
 
 // const StyledInput = styled.input`
 //   border: 1px solid #000;
@@ -45,7 +44,6 @@ import StyledLogin from "../template/LoginForm";
 //   width: 150px;
 //   box-sizing: border-box;
 // `;
-
 
 const Login = () => {
   return (
@@ -58,20 +56,27 @@ const Login = () => {
 // <StyledLogin>
 //   <h2>Login</h2>
 
-{/*        <StyledLabel  >Username</StyledLabel>
+{
+  /*        <StyledLabel  >Username</StyledLabel>
        <StyledInput type="text" placeholder="email" />
        <StyledLabel >Password</StyledLabel>
-      <StyledInput type="password" placeholder="password" /> */}
-{/* <Label/> */ }
-{/* <InputText/> */ }
+      <StyledInput type="password" placeholder="password" /> */
+}
+{
+  /* <Label/> */
+}
+{
+  /* <InputText/> */
+}
 //          <button>Login</button>
 
-{/* <StyledInput type="text" placeholder="email" />
+{
+  /* <StyledInput type="text" placeholder="email" />
     <StyledInput type="password" placeholder="password" />
-    <button>Login</button> */}
+    <button>Login</button> */
+}
 // </StyledLogin>
 
-;
 export default Login;
 
 // import { useActions } from "typeless";

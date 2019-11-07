@@ -28,7 +28,7 @@ h2 {
 `;
 
 interface Props {
-    title: string;
+  title: string;
 }
 
 const LoginForm = (props: Props) => (

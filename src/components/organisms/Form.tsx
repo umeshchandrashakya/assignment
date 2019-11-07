@@ -35,8 +35,24 @@ const FormContainer = styled.div`
    }
    `;
 
+const FormContainer = styled.div`
+  background-color: #c1c1c1;
+  box-sizing: border-box;
+  width: 300px;
+
+  height: 500px;
+  position: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 2px dotted #b38b0d;
+`;
+
 interface Props {
-    title: string;
+  title: string;
 }
 
 const Form = (props: Props) => (
