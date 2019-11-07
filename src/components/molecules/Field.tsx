@@ -10,6 +10,7 @@ const StyledLabel = styled.label`
   margin-right: 23%;
 `;
 
+
 interface Props {
   labelValue: string;
   inputPlaceholder: string;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
-export const StyledInput = styled.input`
+import { useState } from "react";
+const StyledInput = styled.input`
   border: 1px solid #000;
   border-radius: 10px;
   padding: 10px;
@@ -14,20 +14,20 @@ interface Props {
   placeholder: string;
 }
 
-const handleInputChange = event => {
-  console.log(event);
-};
-
 const InputText = (props: Props) => {
+  const [userName, setUserName] = useState("");
+
+  const onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserName(e.target.value);
+  };
+
   return (
-    <div>
-      <StyledInput
-        type="text"
-        placeholder={props.placeholder}
-        onChange={handleInputChange}
-      />
-      <br></br>
-    </div>
+    <StyledInput
+      type="text"
+      onChange={onHandleChange}
+      placeholder={props.placeholder}
+      value={userName}
+    />
   );
 };
 export default InputText;

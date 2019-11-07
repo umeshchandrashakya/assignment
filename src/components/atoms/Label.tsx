@@ -7,6 +7,8 @@ const StyledLabel = styled.label`
   display: block;
   text-align: left;
   margin-right: 23%;
+  padding: 2px;
+  color: white;
 `;
 
 interface Props {
