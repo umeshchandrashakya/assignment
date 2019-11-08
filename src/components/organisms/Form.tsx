@@ -36,7 +36,6 @@ interface Props {
 
 const Form = (props: Props) => (
   <FormContainer>
-    <Label value={props.title} />
     <Head value={props.title} />
     <Field inputPlaceholder="username" labelValue="Username" />
     <Field inputPlaceholder="password" labelValue="Password" />
