@@ -7,9 +7,9 @@ class Home extends React.Component {
     return (
       <div>
         <nav>
-          <Link to="/login">Login </Link>
+          <Link id='login' to="/login">Login </Link>
           <br></br>
-          <Link to="/registration">Registration</Link>
+          <Link id='reg' to="/registration">Registration</Link>
           <br></br>
           <br></br>
         </nav>

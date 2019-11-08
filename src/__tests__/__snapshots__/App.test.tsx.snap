@@ -22,6 +22,7 @@ initialize {
                       Object {
                         "attribs": Object {
                           "href": "/login",
+                          "id": "login",
                         },
                         "children": Array [
                           Object {
@@ -42,6 +43,7 @@ initialize {
                           "next": Object {
                             "attribs": Object {
                               "href": "/registration",
+                              "id": "reg",
                             },
                             "children": Array [
                               Object {
@@ -82,9 +84,11 @@ initialize {
                             "type": "tag",
                             "x-attribsNamespace": Object {
                               "href": undefined,
+                              "id": undefined,
                             },
                             "x-attribsPrefix": Object {
                               "href": undefined,
+                              "id": undefined,
                             },
                           },
                           "parent": [Circular],
@@ -98,9 +102,11 @@ initialize {
                         "type": "tag",
                         "x-attribsNamespace": Object {
                           "href": undefined,
+                          "id": undefined,
                         },
                         "x-attribsPrefix": Object {
                           "href": undefined,
+                          "id": undefined,
                         },
                       },
                       Object {
@@ -111,6 +117,7 @@ initialize {
                         "next": Object {
                           "attribs": Object {
                             "href": "/registration",
+                            "id": "reg",
                           },
                           "children": Array [
                             Object {
@@ -151,15 +158,18 @@ initialize {
                           "type": "tag",
                           "x-attribsNamespace": Object {
                             "href": undefined,
+                            "id": undefined,
                           },
                           "x-attribsPrefix": Object {
                             "href": undefined,
+                            "id": undefined,
                           },
                         },
                         "parent": [Circular],
                         "prev": Object {
                           "attribs": Object {
                             "href": "/login",
+                            "id": "login",
                           },
                           "children": Array [
                             Object {
@@ -178,9 +188,11 @@ initialize {
                           "type": "tag",
                           "x-attribsNamespace": Object {
                             "href": undefined,
+                            "id": undefined,
                           },
                           "x-attribsPrefix": Object {
                             "href": undefined,
+                            "id": undefined,
                           },
                         },
                         "type": "tag",
@@ -190,6 +202,7 @@ initialize {
                       Object {
                         "attribs": Object {
                           "href": "/registration",
+                          "id": "reg",
                         },
                         "children": Array [
                           Object {
@@ -236,6 +249,7 @@ initialize {
                           "prev": Object {
                             "attribs": Object {
                               "href": "/login",
+                              "id": "login",
                             },
                             "children": Array [
                               Object {
@@ -254,9 +268,11 @@ initialize {
                             "type": "tag",
                             "x-attribsNamespace": Object {
                               "href": undefined,
+                              "id": undefined,
                             },
                             "x-attribsPrefix": Object {
                               "href": undefined,
+                              "id": undefined,
                             },
                           },
                           "type": "tag",
@@ -266,9 +282,11 @@ initialize {
                         "type": "tag",
                         "x-attribsNamespace": Object {
                           "href": undefined,
+                          "id": undefined,
                         },
                         "x-attribsPrefix": Object {
                           "href": undefined,
+                          "id": undefined,
                         },
                       },
                       Object {
@@ -292,6 +310,7 @@ initialize {
                         "prev": Object {
                           "attribs": Object {
                             "href": "/registration",
+                            "id": "reg",
                           },
                           "children": Array [
                             Object {
@@ -316,6 +335,7 @@ initialize {
                             "prev": Object {
                               "attribs": Object {
                                 "href": "/login",
+                                "id": "login",
                               },
                               "children": Array [
                                 Object {
@@ -334,9 +354,11 @@ initialize {
                               "type": "tag",
                               "x-attribsNamespace": Object {
                                 "href": undefined,
+                                "id": undefined,
                               },
                               "x-attribsPrefix": Object {
                                 "href": undefined,
+                                "id": undefined,
                               },
                             },
                             "type": "tag",
@@ -346,9 +368,11 @@ initialize {
                           "type": "tag",
                           "x-attribsNamespace": Object {
                             "href": undefined,
+                            "id": undefined,
                           },
                           "x-attribsPrefix": Object {
                             "href": undefined,
+                            "id": undefined,
                           },
                         },
                         "type": "tag",
@@ -372,6 +396,7 @@ initialize {
                           "prev": Object {
                             "attribs": Object {
                               "href": "/registration",
+                              "id": "reg",
                             },
                             "children": Array [
                               Object {
@@ -396,6 +421,7 @@ initialize {
                               "prev": Object {
                                 "attribs": Object {
                                   "href": "/login",
+                                  "id": "login",
                                 },
                                 "children": Array [
                                   Object {
@@ -414,9 +440,11 @@ initialize {
                                 "type": "tag",
                                 "x-attribsNamespace": Object {
                                   "href": undefined,
+                                  "id": undefined,
                                 },
                                 "x-attribsPrefix": Object {
                                   "href": undefined,
+                                  "id": undefined,
                                 },
                               },
                               "type": "tag",
@@ -426,9 +454,11 @@ initialize {
                             "type": "tag",
                             "x-attribsNamespace": Object {
                               "href": undefined,
+                              "id": undefined,
                             },
                             "x-attribsPrefix": Object {
                               "href": undefined,
+                              "id": undefined,
                             },
                           },
                           "type": "tag",
