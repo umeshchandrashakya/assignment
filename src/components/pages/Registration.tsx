@@ -25,20 +25,13 @@ const StyledRegistration = styled.div`
   box-sizing: border-box;
 `;
 
-
-
-const Registration: React.FC = () => {
+const Registration = () => {
 
  return (
-  
-  <StyledRegistration >
-    
-     
+   
     <RegForm title="REGISTRATION"></RegForm>
     
-   
-      </StyledRegistration>
-      
+    
   
   );
 };
