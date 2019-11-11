@@ -17,7 +17,6 @@ const StyledLogin = styled.div`
 
 const App: React.FC = () => {
   return (
-    <StyledLogin>
       <Router>
         <div>
           <Switch>
@@ -27,7 +26,6 @@ const App: React.FC = () => {
           </Switch>
         </div>
       </Router>
-    </StyledLogin>
   );
 };
 
