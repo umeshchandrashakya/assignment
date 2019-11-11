@@ -9,23 +9,39 @@ import Button from "../atoms/Button"
 
 
 const FormContainer = styled.form`
-
+/* 
   display: flex;
-  /* text-align:center; */
+  text-align:center;
   align-items: center;
   flex-flow: column;
-
-  margin:  auto;
+  margin: 0 auto;
   border: 1px ;
   border-radius: 20px;
   background-repeat: no-repeat;
   background-image: url(${image1});
   height:70vh;
   width: 50vw;
-  background-size: cover;
+ background-size: cover;
   background-position: center center;
-  box-sizing: border-box;
-
+  box-sizing: border-box; */
+  display: flex;
+text-align:center;
+align-items: center;
+flex-flow: column;
+margin:  auto;
+border: 1px ;
+border-radius: 20px;
+background-repeat: no-repeat;
+background-image: url(${image1});
+height:70vh;
+width: 50vw;
+background-size: cover;
+background-position: center center;
+box-sizing: border-box;
+left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
   `;
 interface Props {
     title: string;
@@ -35,7 +51,7 @@ const RegistrationForm = (props: Props) => (
     
 
 
-    <FormContainer className="form-container">
+    <FormContainer className="form-conatiner">
       
  <Head value={props.title}></Head>
       
