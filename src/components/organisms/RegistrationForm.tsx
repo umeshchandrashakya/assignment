@@ -13,14 +13,14 @@ const FromContainer = styled.form`
   text-align:center;
   align-items: center;
   flex-flow: column;
-  width: 300px;
-  height: 400px;
+  /* width: 300px;
+  height: 400px; */
   margin:  auto;
   border: 1px ;
   border-radius: 20px;
   background-repeat: no-repeat;
   background-image: url(${image1});
-  height:65vh;
+  height:98vh;
   width: 40vw;
   margin-top:120px;
   background-size: cover;

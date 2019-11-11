@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-const StyledHead = styled.h2`
+const StyledHead = styled.h4`
 font-weight : bold;
 caret-color : getColor('blue');
 display : block;

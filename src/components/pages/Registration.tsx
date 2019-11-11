@@ -21,7 +21,7 @@ const StyledRegistration = styled.div`
   border-radius: 20px;
   background-repeat: no-repeat;
   background-image: url(${image});
-  height: 100vh;
+  height: 140vh;
   width: 100vw;
 
   background-size: cover;
