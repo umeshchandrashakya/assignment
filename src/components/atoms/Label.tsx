@@ -7,7 +7,7 @@ caret-color: getColor('blue');
 display: block;
 text-align: left;
 margin-right: 23%;
-margin-top : 20px;
+margin-top : 5px;
     margin-bottom : 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;

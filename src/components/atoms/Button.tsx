@@ -17,6 +17,6 @@ interface Props{
   buttonText:string;
 }
    const Button = (props:Props) => (
-    <Styledbutton>{props.buttonText}</Styledbutton>
+    <Styledbutton >{props.buttonText}</Styledbutton>
 );
 export default Button;

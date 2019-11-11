@@ -11,24 +11,20 @@ import { url } from "inspector";
 import RegForm from "../template/RegForm";
 
 const StyledRegistration = styled.div`
+ 
   display: flex;
-  
   flex-flow: column;
-  width: 300px;
-  height: 400px;
   margin: 0 auto;
   border: 1px ;
-  border-radius: 20px;
   background-repeat: no-repeat;
   background-image: url(${image});
   height: 100vh;
   width: 100vw;
-
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
-  
- 
+
+
 `;
 
 
@@ -36,12 +32,16 @@ const StyledRegistration = styled.div`
 const Registration: React.FC = () => {
 
  return (
-   
-  <StyledRegistration>
-
-    <RegForm title="REGISTRATION"></RegForm>
-    </StyledRegistration>
+  
+  <StyledRegistration >
     
+     
+    <RegForm title="REGISTRATION"></RegForm>
+    
+   
+      </StyledRegistration>
+      
+  
   );
 };
 

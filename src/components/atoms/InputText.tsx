@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { useState } from "react";
 
 const StyledInput = styled.input`
   border: 1px solid #000;
   border-radius: 10px;
   padding: 10px;
   margin: 5px;
-  width: 150px;
+  width: 100%;
   box-sizing: border-box;
 `;
 
@@ -16,19 +15,10 @@ interface Props {
 }
 
 const InputText = (props: Props) => {
-  const [userName, setUserName] = useState("");
+  return (<div>
+    <StyledInput type="text" placeholder={props.placeholder} /><br></br>
+  </div>
 
-  const onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUserName(e.target.value);
-  };
-
-  return (
-    <StyledInput
-      type="text"
-      onChange={onHandleChange}
-      placeholder={props.placeholder}
-      value={userName}
-    />
-  );
-};
+  )
+}
 export default InputText;
