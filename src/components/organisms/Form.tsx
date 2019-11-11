@@ -18,14 +18,14 @@ const FormContainer = styled.div`
   border-radius: 15px;
   background-repeat: no-repeat;
   background-image: url(${formbg});
-  height: 75vh;
-  width: 50vw;
+  height: 60vh;
+  width: 40vw;
   background-position: center center;
   box-sizing: border-box;
   position: absolute;
   margin: auto;
   left: 0;
-  right: 10%;
+  right: 0;
   bottom: 0;
   top: 0;
 `;
@@ -35,7 +35,7 @@ interface Props {
 }
 
 const Form = (props: Props) => (
-  <FormContainer>
+  <FormContainer className="form-container">
     <Head value={props.title} />
     <Field inputPlaceholder="username" labelValue="Username" />
     <Field inputPlaceholder="password" labelValue="Password" />

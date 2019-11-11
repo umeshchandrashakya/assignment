@@ -10,7 +10,7 @@ import Button from "../atoms/Button"
 
 const FormContainer = styled.form`
 
-  display: flex;
+  /* display: flex;
   text-align:center;
   align-items: center;
   flex-flow: column;
@@ -26,7 +26,7 @@ const FormContainer = styled.form`
 
   background-size: cover;
   background-position: center center;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 
   `;
 interface Props {

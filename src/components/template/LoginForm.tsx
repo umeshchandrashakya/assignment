@@ -10,8 +10,8 @@ const StyledLogin = styled.div`
   display: flex;
   align-items: center;
   flex-flow: column;
-  width: 350px;
-  height: 350px;
+  /* width: 350px;
+  height: 350px; */
   margin: 0 auto;
   background-repeat: no-repeat;
   background-image: url(${bg});
@@ -32,7 +32,7 @@ interface Props {
 }
 
 const LoginForm = (props: Props) => (
-    <StyledLogin>
+    <StyledLogin className="container-fluid">
     <Form title={props.title} />
     </StyledLogin>
 );
