@@ -23,8 +23,6 @@ const StyledRegistration = styled.div`
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
-
-
 `;
 
 
