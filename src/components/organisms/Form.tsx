@@ -12,20 +12,20 @@ const FormContainer = styled.div`
   display: flex;
   align-items: center;
   flex-flow: column;
-  width: 300px;
-  height: 300px;
+  /* width: 300px;
+  height: 300px; */
   margin-left: 0 auto;
   border-radius: 15px;
   background-repeat: no-repeat;
   background-image: url(${formbg});
-  height: 50vh;
-  width: 40vw;
+  height: 75vh;
+  width: 50vw;
   background-position: center center;
   box-sizing: border-box;
   position: absolute;
   margin: auto;
   left: 0;
-  right: 0;
+  right: 10%;
   bottom: 0;
   top: 0;
 `;

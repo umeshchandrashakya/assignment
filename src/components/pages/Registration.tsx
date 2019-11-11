@@ -18,7 +18,7 @@ const StyledRegistration = styled.div`
   border: 1px ;
   background-repeat: no-repeat;
   background-image: url(${image});
-  height: 100vh;
+  height: 140vh;
   width: 100vw;
   background-size: cover;
   background-position: center center;
