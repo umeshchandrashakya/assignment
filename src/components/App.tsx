@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Login from "./pages/Login";
-import Registration from "./pages/Registration";
+import LoginPage from "./pages/LoginPage";
+import RegistrationPage from "./pages/RegistrationPage";
 import Home from "./pages/Home";
 import img from "../img/sample.jpg";
 import styled from "styled-components";
@@ -21,8 +21,8 @@ const App: React.FC = () => {
         <div>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route target exact path="/registration" component={Registration} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route target exact path="/registration" component={RegistrationPage} />
           </Switch>
         </div>
       </Router>

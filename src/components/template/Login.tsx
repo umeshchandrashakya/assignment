@@ -3,15 +3,15 @@ import styled from "styled-components";
 import InputText from "../atoms/InputText";
 import Label from "../atoms/Label";
 import Field from "../molecules/Field";
-import Form from "../organisms/Form";
+import Form from "../organisms/LoginForm";
 import bg from "../../assets/bg.jpg";
 
 const StyledLogin = styled.div`
   display: flex;
   align-items: center;
   flex-flow: column;
-  width: 350px;
-  height: 350px;
+  /* width: 350px;
+  height: 350px; */
   margin: 0 auto;
   background-repeat: no-repeat;
   background-image: url(${bg});
@@ -29,12 +29,15 @@ h2 {
 
 interface Props {
   title: string;
+  onUsernameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const LoginForm = (props: Props) => (
-    <StyledLogin className="container-fluid">
-    <Form title={props.title} />
-    </StyledLogin>
+  <StyledLogin className="container-fluid">
+    <Form {...props} />
+  </StyledLogin>
 );
 
 export default LoginForm;

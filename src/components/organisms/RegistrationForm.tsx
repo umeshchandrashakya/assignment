@@ -2,15 +2,15 @@
 import React from "react";
 import styled from "styled-components";
 import InputText from "../atoms/InputText";
-import Head  from "../atoms/Head";
+import Head from "../atoms/Head";
 import Field from "../molecules/Field";
 import image1 from "../../assests/image1.jpg";
 import Button from "../atoms/Button"
 
 
 const FormContainer = styled.form`
-/* 
-  display: flex;
+
+  /* display: flex;
   text-align:center;
   align-items: center;
   flex-flow: column;
@@ -24,44 +24,31 @@ const FormContainer = styled.form`
  background-size: cover;
   background-position: center center;
   box-sizing: border-box; */
-  display: flex;
-text-align:center;
-align-items: center;
-flex-flow: column;
-margin:  auto;
-border: 1px ;
-border-radius: 20px;
-background-repeat: no-repeat;
-background-image: url(${image1});
-height:70vh;
-width: 50vw;
-background-size: cover;
-background-position: center center;
-box-sizing: border-box;
-left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
   `;
 interface Props {
-    title: string;
+  title: string;
+  onNameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onEmailChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onContactNoChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const RegistrationForm = (props: Props) => (
-    
 
 
-    <FormContainer className="form-conatiner">
-      
- <Head value={props.title}></Head>
-      
-        <Field labelValue="UserName" inputPlaceholder="UserName"></Field>
-        <Field labelValue="Email" inputPlaceholder="Email"></Field>
-        <Field labelValue="Password" inputPlaceholder="Password"></Field>
-        <Field labelValue="Contact No" inputPlaceholder=""></Field>
-        <Button  buttonText="submit"></Button>
-        
-      </FormContainer>
-      
+
+  <FormContainer className="form-container">
+
+    <Head value={props.title}></Head>
+
+    <Field onChange={props.onNameChange} labelValue="UserName" inputPlaceholder="UserName"></Field>
+    <Field onChange={props.onEmailChange} labelValue="Email" inputPlaceholder="Email"></Field>
+    <Field onChange={props.onPasswordChange} labelValue="Password" inputPlaceholder="Password"></Field>
+    <Field onChange={props.onContactNoChange} labelValue="Contact No" inputPlaceholder=""></Field>
+    <Button onClick={props.onClick} buttonText="submit"></Button>
+
+  </FormContainer>
+
 );
 export default RegistrationForm;

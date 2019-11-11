@@ -4,8 +4,8 @@ import Adapter from "enzyme-adapter-react-16";
 import { configure, shallow, mount, render } from "enzyme";
 import { MemoryRouter } from "react-router";
 import Home from "../components/pages/Home";
-import Login from "../components/pages/Login";
-import Registration from "../components/pages/Registration";
+import LoginPage from "../components/pages/LoginPage";
+import RegistrationPage from "../components/pages/RegistrationPage";
 
 describe("<App />", () => {
   it("renders without crashing", () => {
@@ -31,7 +31,7 @@ describe("<App />", () => {
           <App />
       </MemoryRouter>
     );
-    expect(wrapper.find(Login)).toHaveLength(1);
+    expect(wrapper.find(LoginPage)).toHaveLength(1);
   });
   test("valid path should redirect to Registration", () => {
     const wrapper = mount(
@@ -39,7 +39,7 @@ describe("<App />", () => {
           <App />
       </MemoryRouter>
     );
-    expect(wrapper.find(Registration)).toHaveLength(1);
+    expect(wrapper.find(RegistrationPage)).toHaveLength(1);
   });
   it("has a div tag", () => {
     const warpper = shallow(<App />);
