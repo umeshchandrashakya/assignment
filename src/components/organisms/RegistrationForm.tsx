@@ -11,19 +11,17 @@ import Button from "../atoms/Button"
 const FormContainer = styled.form`
 
   display: flex;
-  text-align:center;
+  /* text-align:center; */
   align-items: center;
   flex-flow: column;
-  
+
   margin:  auto;
   border: 1px ;
   border-radius: 20px;
   background-repeat: no-repeat;
   background-image: url(${image1});
   height:70vh;
-  width: 40vw;
-
-
+  width: 50vw;
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
@@ -37,7 +35,7 @@ const RegistrationForm = (props: Props) => (
     
 
 
-    <FormContainer >
+    <FormContainer className="form-container">
       
  <Head value={props.title}></Head>
       

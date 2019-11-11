@@ -32,7 +32,7 @@ interface Props {
 }
 
 const LoginForm = (props: Props) => (
-    <StyledLogin>
+    <StyledLogin className="container-fluid">
     <Form title={props.title} />
     </StyledLogin>
 );
