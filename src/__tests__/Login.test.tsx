@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from '../components/pages/Login';
+import LoginPage from '../components/pages/LoginPage';
 import * as enzyme from 'enzyme';
 //jest.unmock('axios');
 import { DefaultTypelessProvider } from 'typeless';
@@ -11,7 +11,7 @@ describe('<Login />', () => {
     beforeEach(() => {
         wrapper = enzyme.shallow(
             <DefaultTypelessProvider>
-                <Login />
+                <LoginPage />
             </DefaultTypelessProvider>
         );
     });

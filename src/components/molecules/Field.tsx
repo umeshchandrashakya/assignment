@@ -7,13 +7,14 @@ import Label from "../atoms/Label";
 interface Props {
   labelValue: string;
   inputPlaceholder: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Field = (props: Props) => (
-    <div>
-        <Label value={props.labelValue} />
-        <InputText placeholder={props.inputPlaceholder} /> 
-    </div>
-   );
-   
+  <div>
+    <Label value={props.labelValue} />
+    <InputText onChange={props.onChange} placeholder={props.inputPlaceholder} />
+  </div>
+);
+
 export default Field;

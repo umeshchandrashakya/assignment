@@ -3,7 +3,7 @@ import styled from "styled-components";
 import InputText from "../atoms/InputText";
 import Label from "../atoms/Label";
 import Field from "../molecules/Field";
-import Form from "../organisms/Form";
+import Form from "../organisms/LoginForm";
 import RegistrationForm from "../organisms/RegistrationForm";
 import image from "../../assests/image.jpg";
 const StyledRegistration = styled.div`
@@ -24,11 +24,16 @@ box-sizing: border-box;
 `;
 interface Props {
     title: string;
+    onNameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onEmailChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onContactNoChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const RegForm = (props: Props) => (
     <StyledRegistration className="container-fluid">
-    <RegistrationForm title={props.title} />
+        <RegistrationForm {...props} />
     </StyledRegistration>
 );
 export default RegForm;

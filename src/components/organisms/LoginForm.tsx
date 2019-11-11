@@ -32,14 +32,17 @@ const FormContainer = styled.div`
 
 interface Props {
   title: string;
+  onUsernameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const Form = (props: Props) => (
   <FormContainer className="form-container">
     <Head value={props.title} />
-    <Field inputPlaceholder="username" labelValue="Username" />
-    <Field inputPlaceholder="password" labelValue="Password" />
-    <Button buttonText="Login"></Button>
+    <Field onChange={props.onUsernameChange} inputPlaceholder="username" labelValue="Username" />
+    <Field onChange={props.onPasswordChange} inputPlaceholder="password" labelValue="Password" />
+    <Button onClick={props.onClick} buttonText="Login"></Button>
   </FormContainer>
 );
 

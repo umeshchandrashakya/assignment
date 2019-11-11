@@ -12,11 +12,12 @@ const StyledInput = styled.input`
 
 interface Props {
   placeholder: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const InputText = (props: Props) => {
   return (<div>
-    <StyledInput type="text" placeholder={props.placeholder} /><br></br>
+    <StyledInput onChange={props.onChange} type="text" placeholder={props.placeholder} /><br></br>
   </div>
 
   )

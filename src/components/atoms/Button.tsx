@@ -14,12 +14,12 @@ const Styledbutton = styled.button`
     box-sizing: border-box;
 `;
 
-interface Props{
-  buttonText:string;
-  
+interface Props {
+  buttonText: string;
+  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-   const Button = (props:Props) => (
-    <Styledbutton >{props.buttonText}</Styledbutton>
+const Button = (props: Props) => (
+  <Styledbutton onClick={props.onClick}>{props.buttonText}</Styledbutton>
 );
 export default Button;
