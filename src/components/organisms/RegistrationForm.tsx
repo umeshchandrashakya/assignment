@@ -10,21 +10,28 @@ import Button from "../atoms/Button"
 
 const FormContainer = styled.form`
 
-  /* display: flex;
-  text-align:center;
-  align-items: center;
-  flex-flow: column;
-  margin: 0 auto;
-  border: 1px ;
-  border-radius: 20px;
-  background-repeat: no-repeat;
-  background-image: url(${image1});
-  height:70vh;
-  width: 50vw;
- background-size: cover;
-  background-position: center center;
-  box-sizing: border-box; */
+
+display: flex;
+text-align:center;
+align-items: center;
+flex-flow: column;
+margin: auto;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+border: 1px ;
+position:absolute;
+border-radius: 20px;
+background-repeat: no-repeat;
+background-image: url(${image1});
+height:70vh;
+width: 50vw;
+background-size: cover;
+background-position: center center;
+box-sizing: border-box;
   `;
+
 interface Props {
   title: string;
   onNameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
