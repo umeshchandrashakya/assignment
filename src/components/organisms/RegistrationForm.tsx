@@ -6,31 +6,31 @@ import Head from "../atoms/Head";
 import Field from "../molecules/Field";
 import image1 from "../../assests/image1.jpg";
 import Button from "../atoms/Button"
+import Label from "../atoms/Label";
 
 
-const FormContainer = styled.form`
+const FormContainer = styled.div`
 
 
 display: flex;
 text-align:center;
 align-items: center;
 flex-flow: column;
-margin: auto;
-left: 0;
-right: 0;
-bottom: 0;
-top: 0;
+margin:  auto;
 border: 1px ;
-position:absolute;
+width:60vh;
 border-radius: 20px;
 background-repeat: no-repeat;
 background-image: url(${image1});
-height:70vh;
-width: 50vw;
-background-size: cover;
+background-size: 100% 100%;
 background-position: center center;
 box-sizing: border-box;
+
   `;
+
+
+
+
 
 interface Props {
   title: string;
@@ -44,9 +44,8 @@ interface Props {
 const RegistrationForm = (props: Props) => (
 
 
-
-  <FormContainer className="form-container">
-
+  <FormContainer >
+  
     <Head value={props.title}></Head>
 
     <Field onChange={props.onNameChange} labelValue="UserName" inputPlaceholder="UserName"></Field>
@@ -56,6 +55,6 @@ const RegistrationForm = (props: Props) => (
     <Button onClick={props.onClick} buttonText="submit"></Button>
 
   </FormContainer>
-
+  
 );
 export default RegistrationForm;
