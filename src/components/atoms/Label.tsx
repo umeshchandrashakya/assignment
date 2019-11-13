@@ -6,10 +6,7 @@ font-weight: bold;
 caret-color: getColor('blue'); 
 display: block;
 text-align: left;
-margin-right: 23%;
-margin-top : 5px;
-margin-bottom : 15px;
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'Courier New', Courier, monospace;
 font-size: 14px;
 `;
 
@@ -18,8 +15,7 @@ interface Props {
 }
 
 const Label = (props: Props) => (
-    <StyledLabel >{props.value}
-    <br></br></StyledLabel>
+    <StyledLabel>{props.value}</StyledLabel>
 );
 
 export default Label;

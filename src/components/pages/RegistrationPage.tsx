@@ -1,11 +1,4 @@
 import React from "react";
-import Field from "../molecules/Field";
-import Label from "../atoms/Label";
-import styled from "styled-components";
-import Button from "../atoms/Button";
-import image from "../../assests/image.jpg";
-import image1 from "../../assests/image1.jpg";
-import { url } from "inspector";
 import Registration from "../template/Registration";
 import { useActions } from "typeless";
 import { RegActions, getRegState } from '../typeless/interface/reg';

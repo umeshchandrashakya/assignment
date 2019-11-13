@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import InputText from "../atoms/InputText";
-import Label from "../atoms/Label";
 import Head from "../atoms/Head";
 import Field from "../molecules/Field";
 import Button from "../atoms/Button";
