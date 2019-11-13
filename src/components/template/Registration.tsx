@@ -1,24 +1,29 @@
 import React from "react";
 import styled from "styled-components";
-import InputText from "../atoms/InputText";
-import Label from "../atoms/Label";
-import Field from "../molecules/Field";
-import Form from "../organisms/LoginForm";
 import RegistrationForm from "../organisms/RegistrationForm";
-import image from "../../assests/image.jpg";
+import image from "../../assets/bg1.jpg";
+
 const StyledRegistration = styled.div`
- 
-display: flex;
+ display: flex;
 flex-flow: column;
-margin: 0 auto;
-border: 1px ;
+margin: auto;
+/* border: 1px ; */
 background-repeat: no-repeat;
-background-image: url(${image});
-height: 100vh;
+background-image: url(${image}) ;
+/* height: 100vh;
 width: 100vw;
 background-size: cover;
-background-position: center center;
-box-sizing: border-box;
+background-position: center center ;
+background-attachment:fixed; */
+/* height: 100vh; */
+
+/* width: 100%; */
+background-size: cover;
+background-position: center  ;
+background-attachment:fixed;
+min-height:50em;
+height:100%;
+min-width:max-content;
 
 
 `;
@@ -32,8 +37,12 @@ interface Props {
 }
 
 const RegForm = (props: Props) => (
-    <StyledRegistration className="container-fluid">
+    <StyledRegistration>
+
         <RegistrationForm {...props} />
+
     </StyledRegistration>
 );
 export default RegForm;
+
+

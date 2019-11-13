@@ -2,12 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledInput = styled.input`
-  border: 1px solid #000;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 5px;
-  width: 90%;
-  box-sizing: border-box;
+  border: 1px hidden #fff;
+  /* border-style:unset */
+  border-radius: 4px;
+  padding: 7px;
+  font-family: 'Courier New', Courier, monospace;
+  /* margin: 5px; */
+  width: 100%;
+  /* box-sizing: border-box; */
 `;
 
 interface Props {
@@ -16,10 +18,8 @@ interface Props {
 }
 
 const InputText = (props: Props) => {
-  return (<div>
-    <StyledInput onChange={props.onChange} type="text" placeholder={props.placeholder} /><br></br>
-  </div>
-
+  return (
+    <StyledInput onChange={props.onChange} type="text" placeholder={props.placeholder} />
   )
 }
 export default InputText;
