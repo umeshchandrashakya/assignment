@@ -6,9 +6,9 @@ import Field from "../molecules/Field";
 import Form from "../organisms/LoginForm";
 import RegistrationForm from "../organisms/RegistrationForm";
 import image from "../../assests/image.jpg";
+import Head from "../atoms/Head";
 
 const StyledRegistration = styled.div`
- 
  display: flex;
 flex-flow: column;
 margin: 0 auto;
@@ -19,7 +19,7 @@ height: 100vh;
 width: 100vw;
 background-size: cover;
 background-position: center center;
-background-attachment:fixed;
+
 box-sizing: border-box;
 
 `;
@@ -34,9 +34,11 @@ interface Props {
 
 const RegForm = (props: Props) => (
     <StyledRegistration>
-        
+       
         <RegistrationForm {...props} />
-        
+
     </StyledRegistration>
 );
 export default RegForm;
+
+

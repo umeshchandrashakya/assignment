@@ -14,8 +14,7 @@ interface Props {
 
 const Field = (props: Props) => (
   <div>
-    
-    <Label value={props.labelValue} />
+   <Label value={props.labelValue} />
     <InputText onChange={props.onChange} placeholder={props.inputPlaceholder} />
   </div>
 );

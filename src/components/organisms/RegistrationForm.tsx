@@ -18,7 +18,7 @@ align-items: center;
 flex-flow: column;
 margin:  auto;
 border: 1px ;
-width:60vh;
+width:50vw;
 border-radius: 20px;
 background-repeat: no-repeat;
 background-image: url(${image1});
@@ -27,8 +27,6 @@ background-position: center center;
 box-sizing: border-box;
 
   `;
-
-
 
 
 
@@ -43,18 +41,22 @@ interface Props {
 
 const RegistrationForm = (props: Props) => (
 
-
-  <FormContainer >
   
-    <Head value={props.title}></Head>
+  <FormContainer  >
+
+ <Head value={props.title}></Head>
 
     <Field onChange={props.onNameChange} labelValue="UserName" inputPlaceholder="UserName"></Field>
     <Field onChange={props.onEmailChange} labelValue="Email" inputPlaceholder="Email"></Field>
     <Field onChange={props.onPasswordChange} labelValue="Password" inputPlaceholder="Password"></Field>
     <Field onChange={props.onContactNoChange} labelValue="Contact No" inputPlaceholder=""></Field>
     <Button onClick={props.onClick} buttonText="submit"></Button>
-
+    
   </FormContainer>
   
 );
 export default RegistrationForm;
+
+
+
+
