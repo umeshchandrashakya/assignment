@@ -15,11 +15,13 @@ const FormContainer = styled.div`
   margin-left: 0 auto;
   border-radius: 15px;
   background-repeat: no-repeat;
-  background-image: url(${formbg});
+  /* background-image: url(${formbg}); */
+  background-color: rgba(255,255,255, 0.6);
   /* height: 60vh; */
   /* width: 30vw; */
   width:30%;
   min-width:fit-content;
+  
   background-position: center center;
   
   box-sizing: border-box;

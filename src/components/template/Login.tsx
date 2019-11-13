@@ -4,7 +4,7 @@ import InputText from "../atoms/InputText";
 import Label from "../atoms/Label";
 import Field from "../molecules/Field";
 import Form from "../organisms/LoginForm";
-import bg from "../../assets/bg.jpg";
+import img3 from "../../assets/img3.jpg";
 
 const StyledLogin = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ const StyledLogin = styled.div`
   height: 350px; */
   margin: 0 auto;
   background-repeat: no-repeat;
-  background-image: url(${bg});
+  background-image: url(${img3});
   height: 100vh;
   width: 100vw;
   background-size: cover;
