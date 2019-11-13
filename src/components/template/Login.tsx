@@ -20,7 +20,8 @@ const StyledLogin = styled.div`
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
-
+min-height:30em;
+/* min-width: 25em; */
 h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;  

@@ -18,11 +18,12 @@ const FormContainer = styled.div`
   border-radius: 15px;
   background-repeat: no-repeat;
   background-image: url(${formbg});
-  height: 60vh;
-  width: 40vw;
+  /* height: 60vh; */
+  width: 30vw;
   background-position: center center;
   box-sizing: border-box;
-  position: absolute;
+  /* position: absolute; */
+  background-size:100% 100%;
   margin: auto;
   left: 0;
   right: 0;
