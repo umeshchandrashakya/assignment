@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import RegistrationForm from "../organisms/RegistrationForm";
 import image from "../../assets/bg1.jpg";
+import Header from '../organisms/Header';
+import Footer from '../organisms/Footer';
 
 const StyledRegistration = styled.div`
  display: flex;
@@ -38,9 +40,9 @@ interface Props {
 
 const RegForm = (props: Props) => (
     <StyledRegistration>
-
+        <Header />
         <RegistrationForm {...props} />
-
+        <Footer />
     </StyledRegistration>
 );
 export default RegForm;
