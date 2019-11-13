@@ -11,16 +11,24 @@ import Head from "../atoms/Head";
 const StyledRegistration = styled.div`
  display: flex;
 flex-flow: column;
-margin: 0 auto;
+margin: auto;
 border: 1px ;
 background-repeat: no-repeat;
-background-image: url(${image});
-height: 100vh;
+background-image: url(${image}) ;
+/* height: 100vh;
+
 width: 100vw;
 background-size: cover;
-background-position: center center;
+background-position: center center ;
+background-attachment:fixed; */
+/* height: 100vh; */
 
-box-sizing: border-box;
+width: 100%;
+background-size: cover;
+background-position: center  ;
+/* background-attachment:fixed; */
+min-height:50em;
+
 
 `;
 interface Props {
