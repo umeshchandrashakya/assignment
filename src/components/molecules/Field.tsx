@@ -13,13 +13,18 @@ interface Props {
   labelValue: string;
   inputPlaceholder: string;
   isFieldEmpty: boolean;
+  type: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Field = (props: Props) => (
   <StyledField>
     <Label value={props.labelValue} />
-    <InputText onChange={props.onChange} placeholder={props.inputPlaceholder} />
+    <InputText
+      onChange={props.onChange}
+      placeholder={props.inputPlaceholder}
+      type={props.type}
+    />
     <Error
       value={"Field should not be empty"}
       isEmpty={props.isFieldEmpty}

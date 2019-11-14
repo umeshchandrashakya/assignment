@@ -20,7 +20,8 @@ const LoginPage = () => {
     username,
     password,
     userNameEmpty,
-    passwordEmpty
+    passwordEmpty,
+    isLoading
   } = getLoginState.useState();
 
   const onUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -58,6 +59,7 @@ const LoginPage = () => {
       userNameEmpty={userNameEmpty}
       passwordEmpty={passwordEmpty}
       onSignupClick={onSignupClick}
+      isLoading={isLoading}
     />
   );
 };

@@ -5,6 +5,7 @@ import Field from "../molecules/Field";
 import Button from "../atoms/Button";
 
 import formbg from "../../assets/formbg.jpg";
+import { type } from "os";
 
 const FormContainer = styled.div`
   display: flex;
@@ -55,6 +56,7 @@ const Form = (props: Props) => (
       inputPlaceholder="username"
       labelValue="Username"
       isFieldEmpty={props.userNameEmpty}
+      type="text"
     />
 
     <Field
@@ -62,6 +64,7 @@ const Form = (props: Props) => (
       inputPlaceholder="password"
       labelValue="Password"
       isFieldEmpty={props.passwordEmpty}
+      type="password"
     />
     <Button onClick={props.onClick} buttonText="Login"></Button>
 
