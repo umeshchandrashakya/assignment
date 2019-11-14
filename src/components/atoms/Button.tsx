@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { isUndefined } from "util";
 
 
 const Styledbutton = styled.button`
@@ -20,9 +21,16 @@ interface Props {
   buttonText: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   style?: string;
+  loading?: boolean;
 }
 
 const Button = (props: Props) => (
-  <Styledbutton className={`btn btn-${props.style || 'primary'}`} onClick={props.onClick}>{props.buttonText}</Styledbutton>
+  <Styledbutton
+    type='submit'
+    className={`btn btn-${props.style || 'primary'}`}
+    onClick={props.onClick} disabled={props.loading}>
+    <span className="spinner-border spinner-border-sm" role="status" hidden={!props.loading} aria-hidden="true"></span>
+    {props.buttonText}
+  </Styledbutton>
 );
 export default Button;

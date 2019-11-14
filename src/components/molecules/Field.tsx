@@ -11,14 +11,15 @@ margin:10px;
 interface Props {
   labelValue: string;
   inputPlaceholder: string;
+  valid?:boolean;
 
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Field = (props: Props) => (
-  <StyledField>
+  <StyledField className='form-row'>
     <Label value={props.labelValue} />
-    <InputText onChange={props.onChange} placeholder={props.inputPlaceholder} />
+    <InputText onChange={props.onChange} placeholder={props.inputPlaceholder} valid = {props.valid}/>
   </StyledField>
 );
 

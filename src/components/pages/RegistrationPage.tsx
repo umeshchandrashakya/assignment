@@ -7,8 +7,8 @@ import history from "../../history";
 
 
 const RegistrationPage = () => {
-  const { nameChange, emailChange, passwordChange, phoneChange, register } = useActions(RegActions);
-  const { name, email, password, phone } = getRegState.useState();
+  const { nameChange, emailChange, passwordChange, phoneChange, register, validate } = useActions(RegActions);
+  const { name, email, password, phone, isLoading, formSubmitStatus, validName, validEmail, validPhone, validPassword } = getRegState.useState();
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     nameChange(e.target.value)
@@ -23,15 +23,24 @@ const RegistrationPage = () => {
     phoneChange(e.target.value)
   }
   const onRegisterClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    register(name, email, phone, password);
+    if (validName && validEmail && validPhone && validPassword)
+      register(name, email, phone, password);
+    else validate();
     e.preventDefault();
   }
   const onLoginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     history.push('/login');
   }
-  return (
 
+
+
+  return (
     <Registration title="REGISTRATION"
+      isLoading={isLoading}
+      validName={validName}
+      validEmail={validEmail}
+      validPhone={validPhone}
+      validPassword={validPassword}
       onNameChange={onNameChange}
       onEmailChange={onEmailChange}
       onPasswordChange={onPasswordChange}

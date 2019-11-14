@@ -15,6 +15,11 @@ overflow-y:scroll;
 `;
 interface Props {
     title: string;
+    isLoading?:boolean;
+    validName?:boolean;
+    validEmail?:boolean;
+    validPhone?:boolean;
+    validPassword?:boolean;
     onNameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onEmailChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;

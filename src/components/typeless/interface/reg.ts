@@ -15,6 +15,7 @@ export const [regHandle, RegActions, getRegState] = createModule(RegistrationSym
         phoneChange: (phone: string) => ({ payload: { phone } }),
         passwordChange: (password: string) => ({ payload: { password } }),
         activeItemChange: (activeItem: string) => ({ payload: { activeItem } }),
+        validate: () => ({ payload: {} }),
     })
     //
     .withState<RegState>();
@@ -30,6 +31,10 @@ export interface RegState {
     password: string;
     formSubmitStatus: string;
     activeItem: string;
+    validName?: boolean;
+    validEmail?: boolean;
+    validPhone?: boolean;
+    validPassword?: boolean;
 }
 
 export interface Result {

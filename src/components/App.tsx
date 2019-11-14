@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import Home from "./pages/Home";
 import history from '../history';
+import { WelcomePage } from "./pages/WelcomePage";
 // const StyledLogin = styled.div`
 //   background-repeat: no-repeat;
 //   background-image: url(${img});
@@ -22,6 +23,7 @@ const App: React.FC = () => {
           <Route exact path="/" component={Home} />
           <Route exact path="/login" component={LoginPage} />
           <Route target exact path="/registration" component={RegistrationPage} />
+          <Route target exact path="/welcome" component={WelcomePage} />
         </Switch>
       </div>
     </Router>
