@@ -12,10 +12,11 @@ font-size: 14px;
 
 interface Props {
   value: string;
+  onClick?: (event: React.MouseEvent<HTMLLabelElement, MouseEvent>) => void;
 }
 
 const Label = (props: Props) => (
-    <StyledLabel>{props.value}</StyledLabel>
+  <StyledLabel onClick={props.onClick}>{props.value}</StyledLabel>
 );
 
 export default Label;

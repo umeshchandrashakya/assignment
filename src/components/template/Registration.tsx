@@ -6,28 +6,12 @@ import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
 
 const StyledRegistration = styled.div`
- display: flex;
-flex-flow: column;
-margin: auto;
-/* border: 1px ; */
 background-repeat: no-repeat;
 background-image: url(${image}) ;
-/* height: 100vh;
-width: 100vw;
 background-size: cover;
-background-position: center center ;
-background-attachment:fixed; */
-/* height: 100vh; */
-
-/* width: 100%; */
-background-size: cover;
-background-position: center  ;
 background-attachment:fixed;
-min-height:50em;
-height:100%;
-min-width:max-content;
-
-
+height:100vh;
+overflow-y:scroll;
 `;
 interface Props {
     title: string;
@@ -35,14 +19,17 @@ interface Props {
     onEmailChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
     onContactNoChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-    onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    onRegisterClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+    onLoginClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 const RegForm = (props: Props) => (
-    <StyledRegistration>
-        <Header />
-        <RegistrationForm {...props} />
-        <Footer />
+    <StyledRegistration className='row align-items-center justify-content-center'>
+        <div className='col-sm'>
+            <Header />
+            <RegistrationForm {...props} />
+            <Footer />
+        </div>
     </StyledRegistration>
 );
 export default RegForm;

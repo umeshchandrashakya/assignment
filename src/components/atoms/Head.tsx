@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledHead = styled.h4`
+font-family: 'Courier New', Courier, monospace;
 font-weight : bold;
-margin-left:20px;
 caret-color : getColor('blue');
 display : block;
 text-align : center;

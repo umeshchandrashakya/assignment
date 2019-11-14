@@ -3,23 +3,26 @@ import styled from "styled-components";
 
 
 const Styledbutton = styled.button`
-  background: green;
+font-family: 'Courier New', Courier, monospace;
+display:block;
+margin:8px auto;
+  /* background: green;
     color: #fff;
     padding: 10px;
     margin-top:10px;
-  
     width: 100px;
     border: none;
-    border-radius: 10px;
-    box-sizing: border-box;
+    border-radius: 4px;
+    box-sizing: border-box; */
 `;
 
 interface Props {
   buttonText: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  style?: string;
 }
 
 const Button = (props: Props) => (
-  <Styledbutton onClick={props.onClick}>{props.buttonText}</Styledbutton>
+  <Styledbutton className={`btn btn-${props.style || 'primary'}`} onClick={props.onClick}>{props.buttonText}</Styledbutton>
 );
 export default Button;

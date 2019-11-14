@@ -2,6 +2,7 @@ import React from "react";
 import Registration from "../template/Registration";
 import { useActions } from "typeless";
 import { RegActions, getRegState } from '../typeless/interface/reg';
+import history from "../../history";
 
 
 
@@ -25,14 +26,18 @@ const RegistrationPage = () => {
     register(name, email, phone, password);
     e.preventDefault();
   }
+  const onLoginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    history.push('/login');
+  }
   return (
-    
+
     <Registration title="REGISTRATION"
       onNameChange={onNameChange}
       onEmailChange={onEmailChange}
       onPasswordChange={onPasswordChange}
       onContactNoChange={onPhoneChange}
-      onClick={onRegisterClick} />
+      onRegisterClick={onRegisterClick}
+      onLoginClick={onLoginClick} />
   );
 };
 
