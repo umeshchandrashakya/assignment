@@ -40,14 +40,36 @@ interface Props {
   onUsernameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  userNameEmpty: boolean;
+  passwordEmpty: boolean;
+  onSignupClick: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void;
 }
 
 const Form = (props: Props) => (
   <FormContainer className="form-container">
     <Head value={props.title} />
-    <Field onChange={props.onUsernameChange} inputPlaceholder="username" labelValue="Username" />
-    <Field onChange={props.onPasswordChange} inputPlaceholder="password" labelValue="Password" />
+    <Field
+      onChange={props.onUsernameChange}
+      inputPlaceholder="username"
+      labelValue="Username"
+      isFieldEmpty={props.userNameEmpty}
+    />
+
+    <Field
+      onChange={props.onPasswordChange}
+      inputPlaceholder="password"
+      labelValue="Password"
+      isFieldEmpty={props.passwordEmpty}
+    />
     <Button onClick={props.onClick} buttonText="Login"></Button>
+
+    <Button
+      style="link"
+      onClick={props.onSignupClick}
+      buttonText="Don't have an account? SIGNUP HERE!"
+    />
   </FormContainer>
 );
 

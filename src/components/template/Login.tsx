@@ -20,14 +20,14 @@ const StyledLogin = styled.div`
   background-size: cover;
   background-position: center center;
   box-sizing: border-box;
-min-height:30em;
-min-width:max-content;
+  min-height: 30em;
+  min-width: max-content;
 
-/* min-width: 25em; */
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;  
-}
+  /* min-width: 25em; */
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
 `;
 
 interface Props {
@@ -35,6 +35,11 @@ interface Props {
   onUsernameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  userNameEmpty: boolean;
+  passwordEmpty: boolean;
+  onSignupClick: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void;
 }
 
 const LoginForm = (props: Props) => (
