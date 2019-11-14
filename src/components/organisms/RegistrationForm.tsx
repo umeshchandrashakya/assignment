@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Head from "../atoms/Head";
 import Field from "../molecules/Field";
-import Button from "../atoms/Button"
-
+import Button from "../atoms/Button";
 
 const FormContainer = styled.div`
 /* border: 1px ; */
@@ -28,8 +27,12 @@ interface Props {
   onEmailChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onContactNoChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onRegisterClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  onLoginClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onRegisterClick: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void;
+  onLoginClick: (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void;
 }
 
 const RegistrationForm = (props: Props) => (
@@ -46,10 +49,5 @@ const RegistrationForm = (props: Props) => (
     <Button loading={props.isLoading} onClick={props.onRegisterClick} buttonText="REGISTER" />
     <Button style='link' onClick={props.onLoginClick} buttonText="Already have an account? Login HERE." />
   </FormContainer>
-
 );
 export default RegistrationForm;
-
-
-
-

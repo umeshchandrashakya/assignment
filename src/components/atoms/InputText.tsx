@@ -17,6 +17,7 @@ const StyledInput = styled.input`
 interface Props {
   placeholder: string;
   valid?: boolean;
+  type?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -26,7 +27,7 @@ const InputText = (props: Props) => {
       <StyledInput
         id={props.placeholder}
         onChange={props.onChange}
-        type="text"
+        type={props.type}
         placeholder={props.placeholder}
         className={`form-control ${isUndefined(props.valid) ? '' : (props.valid ? 'is-valid' : 'is-invalid')}`} />
       <div className="invalid-feedback">
