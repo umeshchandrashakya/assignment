@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Head from "../atoms/Head";
 import Field from "../molecules/Field";
 import Button from "../atoms/Button";
+import { Alert } from "react-bootstrap";
 
 const FormContainer = styled.div`
   /* border: 1px ; */
@@ -17,6 +18,7 @@ const FormContainer = styled.div`
 
 interface Props {
   title: string;
+  isSuccess?: boolean;
   isLoading?: boolean;
   validName?: boolean;
   validEmail?: boolean;
@@ -68,6 +70,7 @@ const RegistrationForm = (props: Props) => (
       onClick={props.onRegisterClick}
       buttonText={"REGISTER"}
     />
+    <Alert variant='danger' hidden={props.isSuccess === undefined || props.isSuccess}>Registration Failed!!!</Alert>
     <Button
       btnStyle={"link"}
       onClick={props.onLoginClick}

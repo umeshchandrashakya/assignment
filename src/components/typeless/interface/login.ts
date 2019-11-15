@@ -25,7 +25,7 @@ export const [loginHandle, LoginActions, getLoginState] = createModule(
 
 export interface LoginState {
   isLoading: boolean;
-  isSignedIn: boolean;
+  isSignedIn?: boolean;
   result: Result;
   error: Error;
   username: string;

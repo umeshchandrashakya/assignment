@@ -22,7 +22,8 @@ const RegistrationPage = () => {
     validName,
     validEmail,
     validPhone,
-    validPassword
+    validPassword,
+    isSuccess
   } = getRegState.useState();
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,11 +47,14 @@ const RegistrationPage = () => {
     e.preventDefault();
   };
   const onLoginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    history.push("/login");
-  };
+    history.replace('/login');
+  }
+
+
 
   return (
     <Registration
+      isSuccess={isSuccess}
       title="REGISTRATION"
       isLoading={isLoading}
       validName={validName}

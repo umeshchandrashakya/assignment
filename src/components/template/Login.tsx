@@ -40,6 +40,7 @@ const StyledLogin = styled.div`
 interface Props {
   title: string;
   isLoading: boolean;
+  isSignedIn?:boolean;
   onUsernameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;

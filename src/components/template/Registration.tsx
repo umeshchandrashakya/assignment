@@ -15,6 +15,7 @@ overflow-y:scroll;
 `;
 interface Props {
     title: string;
+    isSuccess?: boolean;
     isLoading?:boolean;
     validName?:boolean;
     validEmail?:boolean;

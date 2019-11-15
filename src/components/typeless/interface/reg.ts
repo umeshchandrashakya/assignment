@@ -22,7 +22,7 @@ export const [regHandle, RegActions, getRegState] = createModule(RegistrationSym
 
 export interface RegState {
     isLoading: boolean;
-    isSuccess: boolean;
+    isSuccess?: boolean;
     result: Result;
     error: Error;
     name: string;

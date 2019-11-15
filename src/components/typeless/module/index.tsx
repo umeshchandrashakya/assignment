@@ -18,7 +18,6 @@ loginHandle
 
 const initialStateLogin: LoginState = {
   isLoading: false,
-  isSignedIn: false,
   result: { message: "", data: [] },
   error: {},
   username: "",
@@ -47,6 +46,7 @@ loginHandle
   })
   .on(LoginActions.signInError, (state, { error }) => {
     state.isLoading = false;
+    state.isSignedIn = false;
     state.formSubmitStatus = "error";
     state.error = error;
     console.log("Login Error");
@@ -91,7 +91,6 @@ regHandle
 
 const initialStateReg: RegState = {
   isLoading: false,
-  isSuccess: false,
   result: { message: "", data: [] },
   error: {},
   name: "",
@@ -119,6 +118,7 @@ regHandle
   })
   .on(RegActions.regError, (state, { error }) => {
     state.isLoading = false;
+    state.isSuccess = false;
     state.formSubmitStatus = "error";
     state.error = error;
   })

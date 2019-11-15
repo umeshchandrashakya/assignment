@@ -16,7 +16,8 @@ const LoginPage = () => {
     password,
     validUserName,
     validPassword,
-    isLoading
+    isLoading,
+    isSignedIn
   } = getLoginState.useState();
 
   const onUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +32,7 @@ const LoginPage = () => {
   const onSignupClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    history.push("/registration");
+    history.replace("/registration");
   };
 
   const onLoginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -47,6 +48,7 @@ const LoginPage = () => {
 
   return (
     <Login
+    isSignedIn={isSignedIn}
       onUsernameChange={onUsernameChange}
       onPasswordChange={onPasswordChange}
       onClick={onLoginClick}

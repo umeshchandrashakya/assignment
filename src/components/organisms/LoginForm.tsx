@@ -3,20 +3,22 @@ import styled from "styled-components";
 import Head from "../atoms/Head";
 import Field from "../molecules/Field";
 import Button from "../atoms/Button";
+import { Alert } from 'react-bootstrap';
 
 const FormContainer = styled.div`
   /* border: 1px ; */
-  margin: "0 auto";
-  width: "35%";
-  min-width: "250px";
-  border-radius: "4px";
-  background-repeat: "no-repeat";
-  background-color: "rgba(225, 225, 225, 0.6)";
-  padding: "20px";
+  margin: 0 auto;
+  width: 35%;
+  min-width: 250px;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-color: rgba(225, 225, 225, 0.6);
+  padding: 20px;
 `;
 
 interface Props {
   title: string;
+  isSignedIn?: boolean;
   onUsernameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
@@ -46,7 +48,7 @@ const Form = (props: Props) => (
       type={"password"}
     />
     <Button onClick={props.onClick} buttonText={"LOGIN"}></Button>
-
+    <Alert variant='danger' hidden={props.isSignedIn===undefined || props.isSignedIn}>Login Failed!!!</Alert>
     <Button
       btnStyle="link"
       onClick={props.onSignupClick}
