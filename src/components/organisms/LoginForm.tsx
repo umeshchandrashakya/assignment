@@ -55,7 +55,7 @@ const Form = (props: Props) => (
       onChange={props.onUsernameChange}
       inputPlaceholder="username"
       labelValue="Username"
-      isFieldEmpty={props.userNameEmpty}
+      valid={props.userNameEmpty}
       type="text"
     />
 
@@ -63,7 +63,7 @@ const Form = (props: Props) => (
       onChange={props.onPasswordChange}
       inputPlaceholder="password"
       labelValue="Password"
-      isFieldEmpty={props.passwordEmpty}
+      valid={props.passwordEmpty}
       type="password"
     />
     <Button onClick={props.onClick} buttonText="Login"></Button>

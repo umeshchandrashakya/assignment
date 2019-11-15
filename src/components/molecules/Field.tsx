@@ -13,8 +13,6 @@ interface Props {
   labelValue: string;
   inputPlaceholder: string;
   valid?:boolean;
-
-  isFieldEmpty?: boolean;
   type?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
