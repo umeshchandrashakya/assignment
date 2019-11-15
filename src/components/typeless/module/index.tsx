@@ -24,9 +24,7 @@ const initialStateLogin: LoginState = {
   username: "",
   password: "",
   formSubmitStatus: "",
-  activeItem: "home",
-  userNameEmpty: false,
-  passwordEmpty: false
+  activeItem: "home"
 };
 
 // Create a reducer
@@ -62,11 +60,11 @@ loginHandle
   .on(LoginActions.activeItemChange, (state, { activeItem }) => {
     state.activeItem = activeItem;
   })
-  .on(LoginActions.isUserNameEmpty, (state, { isField }) => {
-    state.userNameEmpty = isField;
+  .on(LoginActions.isUserNameValid, (state, { isField }) => {
+    state.validUserName = isField;
   })
-  .on(LoginActions.isPasswordEmpty, (state, { isField }) => {
-    state.passwordEmpty = isField;
+  .on(LoginActions.isPasswordValid, (state, { isField }) => {
+    state.validPassword = isField;
   });
 
 export const signIn = async (email: string, password: string) => {

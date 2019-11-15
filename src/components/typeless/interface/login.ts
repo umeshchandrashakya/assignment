@@ -17,8 +17,8 @@ export const [loginHandle, LoginActions, getLoginState] = createModule(
     usernameChange: (username: string) => ({ payload: { username } }),
     passwordChange: (password: string) => ({ payload: { password } }),
     activeItemChange: (activeItem: string) => ({ payload: { activeItem } }),
-    isUserNameEmpty: (isField: boolean) => ({ payload: { isField } }),
-    isPasswordEmpty: (isField: boolean) => ({ payload: { isField } })
+    isUserNameValid: (isField: boolean) => ({ payload: { isField } }),
+    isPasswordValid: (isField: boolean) => ({ payload: { isField } })
   })
   //
   .withState<LoginState>();
@@ -32,8 +32,8 @@ export interface LoginState {
   password: string;
   formSubmitStatus: string;
   activeItem: string;
-  userNameEmpty: boolean;
-  passwordEmpty: boolean;
+  validUserName?: boolean;
+  validPassword?: boolean;
 }
 
 export interface Result {

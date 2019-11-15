@@ -7,7 +7,7 @@ import Footer from '../organisms/Footer';
 
 const StyledRegistration = styled.div`
 background-repeat: no-repeat;
-background-image: url(${image}) ;
+background-image: url(${image});
 background-size: cover;
 background-attachment:fixed;
 height:100vh;

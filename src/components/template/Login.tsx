@@ -46,15 +46,15 @@ interface Props {
   onUsernameChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onPasswordChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  userNameEmpty: boolean;
-  passwordEmpty: boolean;
+  userNameEmpty?: boolean;
+  passwordEmpty?: boolean;
   onSignupClick: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => void;
 }
 
 const LoginForm = (props: Props) => (
-  <StyledLogin className="container-fluid">
+  <StyledLogin className='row align-items-center justify-content-center'>
     <div
       className="spinner-container"
       style={{ visibility: props.isLoading ? "visible" : "hidden" }}

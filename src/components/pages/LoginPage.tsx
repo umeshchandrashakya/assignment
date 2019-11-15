@@ -1,36 +1,31 @@
 import React from "react";
-import styled from "styled-components";
-import Label from "../atoms/Label";
-import InputText from "../atoms/InputText";
-import Button from "../atoms/Button";
 import Login from "../template/Login";
 import { useActions } from "typeless";
 import { LoginActions, getLoginState } from "../typeless/interface/login";
-import { is } from "@babel/types";
 import history from "../../history";
 const LoginPage = () => {
   const {
     usernameChange,
     passwordChange,
     signIn,
-    isPasswordEmpty,
-    isUserNameEmpty
+    isPasswordValid,
+    isUserNameValid
   } = useActions(LoginActions);
   const {
     username,
     password,
-    userNameEmpty,
-    passwordEmpty,
+    validUserName,
+    validPassword,
     isLoading
   } = getLoginState.useState();
 
   const onUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     usernameChange(e.target.value);
-    isUserNameEmpty(false);
+    isUserNameValid(false);
   };
   const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     passwordChange(e.target.value);
-    isPasswordEmpty(false);
+    isPasswordValid(false);
   };
 
   const onSignupClick = (
@@ -41,9 +36,9 @@ const LoginPage = () => {
 
   const onLoginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     if (username == "") {
-      isUserNameEmpty(true);
+      isUserNameValid(false);
     } else if (password == "") {
-      isPasswordEmpty(true);
+      isPasswordValid(false);
     } else {
       signIn(username, password);
       e.preventDefault();
@@ -56,8 +51,8 @@ const LoginPage = () => {
       onPasswordChange={onPasswordChange}
       onClick={onLoginClick}
       title={"Login Form"}
-      userNameEmpty={userNameEmpty}
-      passwordEmpty={passwordEmpty}
+      userNameEmpty={validUserName}
+      passwordEmpty={validPassword}
       onSignupClick={onSignupClick}
       isLoading={isLoading}
     />
