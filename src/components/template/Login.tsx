@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import InputText from "../atoms/InputText";
-import Label from "../atoms/Label";
-import Field from "../molecules/Field";
 import Form from "../organisms/LoginForm";
 import img3 from "../../assets/img3.jpg";
 import { StyledSpinner } from "../atoms/StyledSpinner";
@@ -54,9 +51,9 @@ interface Props {
 }
 
 const LoginForm = (props: Props) => (
-  <StyledLogin className='row align-items-center justify-content-center'>
+  <StyledLogin className={"row align-items-center justify-content-center"}>
     <div
-      className="spinner-container"
+      className={"spinner-container"}
       style={{ visibility: props.isLoading ? "visible" : "hidden" }}
     >
       <StyledSpinner></StyledSpinner>

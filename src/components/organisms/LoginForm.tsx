@@ -5,14 +5,15 @@ import Field from "../molecules/Field";
 import Button from "../atoms/Button";
 
 const FormContainer = styled.div`
-/* border: 1px ; */
-margin: 0 auto; 
-width:35%;
-min-width:250px;
-border-radius: 4px;
-background-repeat: no-repeat;
-background-color: rgba(225,225,225, 0.6);
-padding:20px;  `;
+  /* border: 1px ; */
+  margin: "0 auto";
+  width: "35%";
+  min-width: "250px";
+  border-radius: "4px";
+  background-repeat: "no-repeat";
+  background-color: "rgba(225, 225, 225, 0.6)";
+  padding: "20px";
+`;
 
 interface Props {
   title: string;
@@ -27,29 +28,29 @@ interface Props {
 }
 
 const Form = (props: Props) => (
-  <FormContainer className="form-container">
+  <FormContainer className={"form-container"}>
     <Head value={props.title} />
     <Field
       onChange={props.onUsernameChange}
-      inputPlaceholder="username"
-      labelValue="Username"
+      inputPlaceholder={"username"}
+      labelValue={"Username"}
       valid={props.userNameEmpty}
-      type="text"
+      type={"text"}
     />
 
     <Field
       onChange={props.onPasswordChange}
-      inputPlaceholder="password"
-      labelValue="Password"
+      inputPlaceholder={"password"}
+      labelValue={"Password"}
       valid={props.passwordEmpty}
-      type="password"
+      type={"password"}
     />
-    <Button onClick={props.onClick} buttonText="Login"></Button>
+    <Button onClick={props.onClick} buttonText={"LOGIN"}></Button>
 
     <Button
-      style="link"
+      btnStyle="link"
       onClick={props.onSignupClick}
-      buttonText="Don't have an account? SIGNUP HERE!"
+      buttonText={"Don't have an account? SIGNUP HERE!"}
     />
   </FormContainer>
 );

@@ -21,11 +21,11 @@ const LoginPage = () => {
 
   const onUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     usernameChange(e.target.value);
-    isUserNameValid(false);
+    isUserNameValid(e.target.value !== "");
   };
   const onPasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     passwordChange(e.target.value);
-    isPasswordValid(false);
+    isPasswordValid(e.target.value !== "");
   };
 
   const onSignupClick = (
@@ -35,9 +35,9 @@ const LoginPage = () => {
   };
 
   const onLoginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    if (username == "") {
+    if (username === "") {
       isUserNameValid(false);
-    } else if (password == "") {
+    } else if (password === "") {
       isPasswordValid(false);
     } else {
       signIn(username, password);
@@ -50,7 +50,7 @@ const LoginPage = () => {
       onUsernameChange={onUsernameChange}
       onPasswordChange={onPasswordChange}
       onClick={onLoginClick}
-      title={"Login Form"}
+      title={"LOGIN"}
       userNameEmpty={validUserName}
       passwordEmpty={validPassword}
       onSignupClick={onSignupClick}
