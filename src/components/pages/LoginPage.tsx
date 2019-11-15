@@ -31,7 +31,7 @@ const LoginPage = () => {
   const onSignupClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    history.push("/registration");
+    history.replace("/registration");
   };
 
   const onLoginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

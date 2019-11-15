@@ -29,7 +29,7 @@ const RegistrationPage = () => {
     e.preventDefault();
   }
   const onLoginClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    history.push('/login');
+    history.replace('/login');
   }
 
 
